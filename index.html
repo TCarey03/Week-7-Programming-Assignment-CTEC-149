@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silent Disco</title>
+
+    <style>
+        #dance-floor {
+            width: 600px;
+            height: 400px;
+            background-color: black;
+            position: relative;
+            margin: 50px auto;
+        }
+
+        .panel {
+            width: 100px;
+            height: 100px;
+            background-color: white;
+            position: absolute;
+        }
+
+        #panel1 {
+            top: 20px;
+            left: 20px;
+        }
+
+        #panel2 {
+            bottom: 20px;
+            right: 20px;
+        }
+
+        #dancer {
+            position: absolute;
+            top: 170px;
+            left: 270px;
+            font-size: 60px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="dance-floor">
+
+        <div id="panel1" class="panel"></div>
+        <div id="panel2" class="panel"></div>
+
+        <div id="dancer">🕺</div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

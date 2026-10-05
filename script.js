@@ -28,3 +28,28 @@ dancer.addEventListener("click", function (event) {
 
     dancer.textContent = "💃";
 });
+
+// Phase 3: Keyboard controls
+window.addEventListener("keydown", function (event) {
+    if (event.key === "ArrowUp") {
+        dancer.textContent = "🕺";
+    }
+
+    if (event.key === "ArrowDown") {
+        dancer.textContent = "💃";
+    }
+
+    if (event.key === "ArrowLeft") {
+        dancer.textContent = "🕴️";
+    }
+
+    if (event.key === "ArrowRight") {
+        dancer.textContent = "🤸";
+    }
+
+    // Reset the Dance Floor and stop the panel timer
+    if (event.key.toLowerCase() === "r") {
+        danceFloor.style.backgroundColor = "black";
+        clearInterval(panelTimer);
+    }
+});

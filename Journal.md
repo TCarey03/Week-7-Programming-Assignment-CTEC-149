@@ -19,3 +19,17 @@ Event bubbling happens when an event starts on an element and then travels up th
 I used event.stopPropagation() inside the Dancer's click listener to stop the event from bubbling up to the Dance Floor. This allows the Dancer to have its own action without also triggering the Floor's click action.
 
 The Dance Floor has its own click listener that changes the background to a random RGB color. The Dancer's listener changes the dancer's emoji and stops the event from reaching the Floor.
+
+----------------------
+
+Phase 3 - Dance Controller
+
+Journal
+
+I used a global window keyboard listener so that the keyboard controls can work regardless of which part of the page currently has focus. Instead of attaching the listener to one specific HTML element, the window can listen for keyboard events throughout the page.
+
+I used event.key to determine which key was pressed. The Arrow Up, Arrow Down, Arrow Left, and Arrow Right keys each change the dancer to a different emoji representing a different dance move.
+
+I also added the r key as a reset shortcut. When the user presses r, the Dance Floor returns to its original black color and clearInterval() stops the panel timer.
+
+One challenge with keyboard input is that holding down a key can cause the keydown event to fire repeatedly. This could cause an action to happen many times instead of only once. For this project, the repeated events are not a major problem because changing the dancer's emoji repeatedly does not cause any serious issues.
